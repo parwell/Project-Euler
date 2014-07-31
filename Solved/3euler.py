@@ -1,14 +1,29 @@
-factors = []
+def genPrimes(limit):
+    primes = list(range(2,int(limit)))
+    current = 3
+    while True:
+        if current >= limit:
+            break
+        for value in range(2, current):
+            if current % value == 0:
+                primes.remove(current)
+                break
+        current += 1
+    return primes
 
-number = 10086647
+def primeFacs(number):
+    factors = []
+    current = 2
+    while current <= number:
+        if number % current == 0:
+            number /= current
+            factors.append(current)
+        else:
+            current += 1
+    factors.sort()
+    return factors
 
-for i in range(2, number):
-    if  number % i == 0:
-        factors.append(i)
-        number = i
-        print(factors)
 
-
-print(839)
-print(71)
+number = 600851475143
+print(max(primeFacs(number)))
 input()
