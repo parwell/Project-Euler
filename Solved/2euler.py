@@ -9,7 +9,6 @@ def genFibs(limit):
         current = first + second
         if current >= limit:
             break
-        print(current)
         numbers.append(current)
         first = second
         second = current
@@ -24,4 +23,5 @@ def getEvens(numbers):
 
     
 numbers = getEvens(genFibs(4000000))
-input(print("Sum: " + str(sum(numbers))))
+print("Sum: " + str(sum(numbers)))
+input()

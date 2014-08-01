@@ -1,11 +1,23 @@
-products = []
+import time
+start = time.time()
 
-for x in range(100, 1000):
-    for y in range(100, 1000):
-        product = x * y
-        if product not in products:
-            if str(product) == str(product)[::-1]:
-                products.append(product)
+def findProducts():
+    products = []
+    for x in range(100,1000):
+        for y in range(100,1000):
+            products.append(x*y)
+    return products
 
-print("Largest palindrome: " + str(max(products)))
+def isPalindrome(number):
+    return str(number) == str(number)[::-1]
+
+def getPalindromes(numbers):
+    palindromes = []
+    for number in numbers:
+        if isPalindrome(number):
+            palindromes.append(number)
+    return palindromes
+
+print(max(getPalindromes(findProducts())))
+print("%.3f" % (time.time()-start))
 input()
