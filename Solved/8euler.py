@@ -12,5 +12,6 @@ for i in range(len(the_num)-4):
               int(the_num[i+4])
     products.append(product)
 
-input(print(max(products)))
+print(max(products))
+input()
 sys.exit()
