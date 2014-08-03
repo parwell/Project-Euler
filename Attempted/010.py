@@ -42,4 +42,3 @@ def isPrime(n):
 print(sum(genPrimes(20000)))
 print("%.3f" % (time.time()-start)+" seconds")
 input()
-sys.exit()
