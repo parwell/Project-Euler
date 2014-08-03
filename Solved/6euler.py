@@ -1,14 +1,21 @@
-sum_squares = 0
-square_sum = 0
+# Sum Square Difference
+# Runtime 0.000 seconds
+
+import time
+start = time.time()
+
+sumSquares = 0
+squareSum = 0
 
 for i in range(1, 101):
     i = i ** 2
-    sum_squares += i
+    sumSquares += i
 
 for i in range(1, 101):
-    square_sum += i
+    squareSum += i
 
-square_sum = square_sum * square_sum
+squareSum = squareSum * squareSum
 
-print(square_sum - sum_squares)
+print(squareSum - sumSquares)
+print("%.3f" % (time.time()-start))
 input()

@@ -1,15 +1,9 @@
-def genPrimes(limit):
-    primes = list(range(2,int(limit)))
-    current = 3
-    while True:
-        if current >= limit:
-            break
-        for value in range(2, current):
-            if current % value == 0:
-                primes.remove(current)
-                break
-        current += 1
-    return primes
+# Largest Prime Factor
+# Runtime 0.005 seconds
+
+import math
+import time
+start = time.time()
 
 def primeFacs(number):
     factors = []
@@ -23,7 +17,7 @@ def primeFacs(number):
     factors.sort()
     return factors
 
-
 number = 600851475143
 print(max(primeFacs(number)))
+print("%.3f" % (time.time()-start))
 input()

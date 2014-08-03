@@ -1,5 +1,8 @@
 # Multiples of 3 and 5
+# Runtime 0.000 seconds
 
+import time
+start = time.time()
 
 total = 0
 
@@ -12,4 +15,5 @@ for i in range(1, 1000):
         continue
 
 print(total)
+print("%.3f" % (time.time()-start))
 input()

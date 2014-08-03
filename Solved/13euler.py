@@ -1,4 +1,9 @@
 # Large Sum
+# Large Sum
+# Runtime 0.000 seconds
+
+import time
+start = time.time()
 
 VALUES = (37107287533902102798797998220837590246510135740250,
           46376937677490009712648124896970078050417018260538,
@@ -103,4 +108,5 @@ VALUES = (37107287533902102798797998220837590246510135740250,
 
 the_sum = str(sum(VALUES))
 print(the_sum[-10:])
+print("%.3f" % (time.time()-start))
 input()

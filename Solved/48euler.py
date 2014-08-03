@@ -1,4 +1,8 @@
 # Self Powers
+# Runtime 0.015 seconds
+
+import time
+start = time.time()
 
 def selfPowerSum(n):
     total = 0
@@ -8,4 +12,5 @@ def selfPowerSum(n):
 
 answer = str(selfPowerSum(1000))
 print(answer[-10:])
+print("%.3f" % (time.time()-start))
 input()

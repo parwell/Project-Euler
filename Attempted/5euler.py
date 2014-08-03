@@ -1,33 +1,29 @@
-num = 20
-while True:
- if num % 20 == 0:
-  if num % 19 == 0:
-   if num % 18 == 0:
-    if num % 17 == 0:
-     if num % 16 == 0:
-      if num % 15 == 0:
-       if num % 14 == 0:
-        if num % 13 == 0:
-         if num % 12 == 0:
-          if num % 11 == 0:
-           print(num)
-          num += 20 * 19 * 18 * 17 * 16 * 15 * 14 * 13 * 12 * 11
-          print('----------')
-         num += 20 * 19 * 18 * 17 * 16 * 15 * 14 * 13 * 12
-         print('999999999')
-        num += 20 * 19 * 18 * 17 * 16 * 15 * 14 * 13
-        print('88888888')
-       num += 20 * 19 * 18 * 17 * 16 * 15 * 14
-       print('7777777')
-      num += 20 * 19 * 18 * 17 * 16 * 15
-      print('666666')
-     num += 20 * 19 * 18 * 17 * 16
-     print('55555')
-    num += 20 * 19 * 18 * 17
-    print('4444')
-   num += 20 * 19 * 18
-   print('333')
-  num += 20 * 19
-  print('22')
- num += 20
- print('1')
+# 5euler
+# Runtime -.--- seconds
+
+import time
+start = time.time()
+
+def smallestMultiple(limit):
+    numbers = list(range(1,limit+1))
+    current = limit*(limit-1)
+    while True:
+        values = []
+        print(current)
+        for number in numbers:
+            values.append(isMultiple(current,number))
+        if bigAnd(values):
+            return current
+        current += 1
+    return current
+
+def bigAnd(values):
+	return False not in values
+
+def isMultiple(a,b):
+    return a % b == 0
+
+
+print(smallestMultiple(10))
+print("%.3f" % (time.time()-start))
+input()

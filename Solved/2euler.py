@@ -1,4 +1,8 @@
 # Even Fibonacci Numbers
+# Runtime 0.000 seconds
+
+import time
+start = time.time()
 
 def genFibs(limit):
     first = 1
@@ -23,5 +27,6 @@ def getEvens(numbers):
 
     
 numbers = getEvens(genFibs(4000000))
-print("Sum: " + str(sum(numbers)))
+print(str(sum(numbers)))
+print("%.3f" % (time.time()-start))
 input()

@@ -1,3 +1,6 @@
+# Largest Palindrome Product
+# Runtime 1.136 seconds
+
 import time
 start = time.time()
 
