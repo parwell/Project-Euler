@@ -1,5 +1,5 @@
 # Special Pythagorean Triplet
-# Runtime 275.230 seconds
+# Runtime 18.119s seconds
 
 import time
 start = time.time()
