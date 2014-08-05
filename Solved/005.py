@@ -12,13 +12,10 @@ def smallestMultiple():
         values = []
         for number in numbers:
             values.append(isMultiple(current,number))
-        if bigAnd(values):
+        if False not in values:
             return current
         current += 1
     return current
-
-def bigAnd(values):
-	return False not in values
 
 def isMultiple(a,b):
     return a % b == 0

@@ -1,5 +1,5 @@
 # Self Powers
-# Runtime 0.015 seconds
+# Runtime 0.065 seconds
 
 import time
 start = time.time()
