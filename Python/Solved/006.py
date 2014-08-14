@@ -14,7 +14,7 @@ for i in range(1, 101):
 for i in range(1, 101):
     squareSum += i
 
-squareSum = squareSum * squareSum
+squareSum *= squareSum
 
 print(squareSum - sumSquares)
 print("%.3f" % (time.time()-start))

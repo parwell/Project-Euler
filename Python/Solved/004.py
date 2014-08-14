@@ -1,5 +1,5 @@
 # Largest Palindrome Product
-# Runtime 1.136 seconds
+# Runtime 0.513 seconds
 
 import time
 start = time.time()
@@ -7,7 +7,7 @@ start = time.time()
 def findProducts():
     products = []
     for x in range(100,1000):
-        for y in range(100,1000):
+        for y in range(x,1000):
             products.append(x*y)
     return products
 
