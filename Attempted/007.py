@@ -2,7 +2,6 @@ def genPrimes(limit):
     primes = list(range(2,int(limit)))
     current = 3
     while True:
-        print(current)
         if current >= limit:
             break
         for value in range(2, current):

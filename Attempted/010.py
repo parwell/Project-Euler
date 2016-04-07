@@ -35,10 +35,10 @@ def isPrime(n):
         return False
     pivot = int(math.sqrt(n))+1
     for divisor in range(3, pivot, 2):
-        if n%divisor == 0:
+        if n % divisor == 0:
             return False
     return True
 
-print(sum(genPrimes(20000)))
+print(sum(genPrimes(2000000)))
 print("%.3f" % (time.time()-start)+" seconds")
 input()
